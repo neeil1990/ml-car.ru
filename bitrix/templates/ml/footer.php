@@ -47,7 +47,9 @@
             </a>
         </div>
     </div>
-
+	<div style="padding-bottom: 20px; text-align: center;">
+ <a href="/privacy.pdf">Политика конфиденциальности</a> | <a href="/Terms.pdf">Пользовательское соглашение</a>
+	</div>
     <div class="wrapper clearfix">
         <div class="navbar-footer">
             <?$APPLICATION->IncludeComponent("bitrix:menu", "main", Array(

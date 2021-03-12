@@ -2,84 +2,84 @@
 $aMenuLinks = Array(
 	Array(
 		"Услуги", 
-		"#services", 
+		"/services/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"INFINITI", 
-		"/", 
+		"/cars/infiniti/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"LEXUS", 
-		"/", 
+		"/cars/leksus/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"RENAULT", 
-		"/", 
+		"/cars/reno/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"LADA", 
-		"/", 
+		"/cars/lada/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"HONDA", 
-		"/", 
+		"/cars/honda/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"FORD", 
-		"/", 
+		"/cars/ford/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"TOYOTA", 
-		"/", 
+		"/cars/toyota/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"SSANGYONG", 
-		"/", 
+		"/cars/ssangyong/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"JEEP", 
-		"/", 
+		"/cars/jeep/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Dodge", 
-		"/", 
+		"/cars/dodge/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Chrysler", 
-		"/", 
+		"/cars/chrysler/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -93,7 +93,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Контакты", 
-		"#contacts", 
+		"/contacts/", 
 		Array(), 
 		Array(), 
 		"" 
