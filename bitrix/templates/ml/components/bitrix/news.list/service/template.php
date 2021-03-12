@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="heading"><?=$arResult['NAME']?></div>
+<div class="heading"><?=$arResult['SECTION']['PATH'][0]['NAME']?></div>
 <div class="services-list">
     <?foreach($arResult["ITEMS"] as $arItem):?>
     <?

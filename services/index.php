@@ -107,9 +107,9 @@ $APPLICATION->SetTitle("services");
     "SEF_FOLDER" => "/services/",	// Каталог ЧПУ (относительно корня сайта)
     "SEF_MODE" => "Y",	// Включить поддержку ЧПУ
     "SEF_URL_TEMPLATES" => array(
-        "detail" => "#ELEMENT_CODE#/",
+        "detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
         "news" => "",
-        "section" => "",
+        "section" => "#SECTION_CODE#/",
     ),
     "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
     "SET_STATUS_404" => "Y",	// Устанавливать статус 404

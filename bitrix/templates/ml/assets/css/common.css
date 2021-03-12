@@ -843,6 +843,8 @@ a.learn-more:hover {
     padding: 17px 0 0 80px;
     font-weight: 700;
     line-height: 20px;
+    display: flex;
+    max-width: 210px;
 }
 
 .service-icon01 {
