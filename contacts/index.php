@@ -24,7 +24,8 @@ $APPLICATION->SetTitle("Контакты");
  <br>
  <br>
 <h1 style="text-align: center;">Как нас найти</h1>
-<p>
+<div style="margin: 0px 0px 0px 120px; font-size: 17px;">
+	<p style="font-size: 25px;">
 	 Автосервис Мотор Ленд
 </p>
 <p>
@@ -42,4 +43,5 @@ $APPLICATION->SetTitle("Контакты");
 <p>
 	 Вс с 9:00 до 18:00
 </p>
+</div>
 <div style="width: 100%; height: 400px; margin-top: 40px;" class="clearfix" id="yamap"></div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

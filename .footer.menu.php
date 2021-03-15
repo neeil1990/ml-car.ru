@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"О нашем центре", 
-		"/", 
+		"#about-us", 
 		Array(), 
 		Array(), 
 		"" 
