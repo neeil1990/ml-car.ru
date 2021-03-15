@@ -159,7 +159,7 @@ $(document).ready(function() {
             if($(el).find('.service-item-in').length){
 
                 $(el).find('.service-item-in').text(function (index, text) {
-                    var crop = 24;
+                    var crop = 21;
 
                     var shortText = $.trim(text).substring(0, crop)
                         .split(" ").join(" ") + "...";
