@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <div class="heading"><?=$arResult['SECTION']['PATH'][0]['NAME']?></div>
-<div class="services-list">
+<div class="services-list" id="drop-down-list">
     <?foreach($arResult["ITEMS"] as $arItem):?>
     <?
     $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

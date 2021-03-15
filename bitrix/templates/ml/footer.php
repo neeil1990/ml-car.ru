@@ -84,6 +84,7 @@
 
 <script type="text/javascript" src="https://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/easing.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/swipe.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/slick.min.js"></script>

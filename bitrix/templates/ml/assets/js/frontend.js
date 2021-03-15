@@ -152,6 +152,52 @@ $(document).ready(function() {
 
     });
 
+    if($('.services-list').length){
+
+        $('.services-list > div').each(function (i, el) {
+
+            if($(el).find('.service-item-in').length){
+
+                $(el).find('.service-item-in').text(function (index, text) {
+                    var crop = 25;
+
+                    var shortText = $.trim(text).substring(0, crop)
+                        .split(" ").join(" ") + "...";
+
+                    if(text.length > crop){
+                        $(this).attr('title', text).tooltip({
+                            track : true,
+                            hide : false,
+                        });
+
+                        return shortText;
+                    }else{
+                        return text;
+                    }
+                });
+            }
+        });
+    }
+
+    if($('#drop-down-list').length){
+
+        $('#drop-down-list > div').after(function (i) {
+            if(i == 7){
+                return $('<a/>', {
+                    href : '/services/',
+                    "class" : 'discount-learn'
+                }).text('Показать все услуги').click(function () {
+                    $(this).parent().children().show();
+                    $(this).remove();
+
+                    return false;
+                });
+            }else if(i > 7){
+                $(this).hide();
+            }
+        });
+    }
+
     $(window).on('load resize scroll', function() {
 
         var width = $(window).width();
