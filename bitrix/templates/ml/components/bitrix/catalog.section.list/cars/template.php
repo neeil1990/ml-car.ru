@@ -20,7 +20,7 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
         <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>" class="car-brand" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
-            <div class="car-brand-bg car-brand-renault"></div>
+            <div class="car-brand-bg" style="background: url(<?=$arSection['PICTURE']['SRC']?>) no-repeat 43%/*20*/ 13px;"></div>
             <span><?=$arSection['NAME']?></span>
         </a>
     <? endforeach; ?>
