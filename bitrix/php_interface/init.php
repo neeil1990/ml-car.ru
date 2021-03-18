@@ -6,7 +6,7 @@ function getServiceList($ids = array()){
         return false;
 
     $arServices = [];
-    $obService = CIBlockElement::GetList(Array(), ["IBLOCK_ID" => 2, "ID" => $ids], false, false, ["ID", "IBLOCK_ID", "NAME", "PREVIEW_PICTURE", "DETAIL_PAGE_URL", "PROPERTY_PRICE"]);
+    $obService = CIBlockElement::GetList(Array(), ["IBLOCK_ID" => 2, "ID" => $ids], false, false, ["ID", "IBLOCK_ID", "NAME", "PREVIEW_PICTURE", "PREVIEW_TEXT", "DETAIL_PAGE_URL", "PROPERTY_PRICE"]);
     while($arService = $obService->GetNext()){
         $arServices[$arService['ID']] = $arService;
         if($arService['PREVIEW_PICTURE'])

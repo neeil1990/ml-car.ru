@@ -22,3 +22,21 @@ $this->setFrameMode(true);
         </div>
     </div>
 <? endif; ?>
+
+<? if($arResult['SERVICES']): ?>
+    <div class="services" id="services">
+        <div class="wrapper clearfix">
+            <div class="heading">Возможно вам будет интересно</div>
+            <div class="services-list">
+                <? foreach($arResult['SERVICES'] as $arService):?>
+                    <div class="service-item" onclick="window.location.href = '<?=$arService['DETAIL_PAGE_URL']?>'" style="height: 150px">
+                        <div class="service-item-in" style="background: url(<?=$arService['PREVIEW_PICTURE']?>) no-repeat 27px 20px;flex-direction: column;">
+                            <span style="margin-bottom: 5px;"><?=$arService['NAME']?> </span>
+                            <span style="font-weight: normal;font-size: smaller;"><?=$arService['PREVIEW_TEXT']?></span>
+                        </div>
+                    </div>
+                <? endforeach; ?>
+            </div>
+        </div>
+    </div>
+<? endif; ?>
