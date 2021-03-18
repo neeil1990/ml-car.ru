@@ -19,13 +19,6 @@ $this->setFrameMode(true);
                 <?=$arResult['DETAIL_TEXT']?>
                 <br/>
             </div>
-            <?
-            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/seo-side.php", Array(), Array(
-                "MODE"      => "html",                                           // будет редактировать в веб-редакторе
-                "NAME"      => "Seo адрес",      // текст всплывающей подсказки на иконке
-                "TEMPLATE"  => ""                    // имя шаблона для нового файла
-            ));
-            ?>
         </div>
     </div>
 <? endif; ?>

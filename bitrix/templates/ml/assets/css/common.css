@@ -822,15 +822,15 @@ a.learn-more:hover {
 
 .service-item {
     display: inline-block;
-    width: 220px;
-    height: 75px;
+    width: 230px;
+    height: 100px;
     -webkit-transform: skew(-10deg);
     -ms-transform: skew(-10deg);
     transform: skew(-10deg);
     border: 1px #bebebe solid;
     border-radius: 6px;
     position: relative;
-    margin: 0 20px 70px 0;
+    margin: 0 15px 70px 0;
     text-align: left;
     cursor: pointer;
 }
@@ -840,9 +840,9 @@ a.learn-more:hover {
     -ms-transform: skew(10deg);
     transform: skew(10deg);
     height: 100%;
-    padding: 17px 0 0 80px;
+    padding: 17px 0 0 75px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 18px;
     display: flex;
     max-width: 210px;
 }
@@ -1043,6 +1043,7 @@ a.discount-learn:hover {
 }
 
 .gallery {
+    margin-top: 50px;
     background: #9de2ff;
     overflow: hidden;
     white-space: nowrap;

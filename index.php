@@ -254,6 +254,18 @@ $APPLICATION->SetTitle('Главная');
     </div>
 </div>
 
+<div class="feedback" id="contacts">
+    <div class="wrapper clearfix">
+        <?
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/feedback.php", Array(), Array(
+            "MODE"      => "html",                                           // будет редактировать в веб-редакторе
+            "NAME"      => "Seo текст",      // текст всплывающей подсказки на иконке
+            "TEMPLATE"  => ""                    // имя шаблона для нового файла
+        ));
+        ?>
+    </div>
+</div>
+
 <?$APPLICATION->IncludeComponent("bitrix:news.line", "gallery", Array(
     "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
     "CACHE_GROUPS" => "Y",	// Учитывать права доступа
@@ -297,17 +309,7 @@ $APPLICATION->SetTitle('Главная');
     </div>
 </div>
 
-<div class="feedback" id="contacts">
-    <div class="wrapper clearfix">
-        <?
-        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/feedback.php", Array(), Array(
-            "MODE"      => "html",                                           // будет редактировать в веб-редакторе
-            "NAME"      => "Seo текст",      // текст всплывающей подсказки на иконке
-            "TEMPLATE"  => ""                    // имя шаблона для нового файла
-        ));
-        ?>
-    </div>
-</div>
+
 
 <div style="width: 100%; height: 400px; margin-top: 40px;" class="clearfix" id="yamap"></div>
 
