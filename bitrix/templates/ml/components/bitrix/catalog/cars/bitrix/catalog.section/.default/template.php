@@ -47,24 +47,40 @@ $this->setFrameMode(true);
 </div>
 <? endif; ?>
 
-<? if($arResult['DESCRIPTION']): ?>
 <div class="seo-block">
     <div class="wrapper clearfix">
+        <? if($arResult['DESCRIPTION']): ?>
         <div class="seo-text">
             <?=$arResult['DESCRIPTION']?>
             <br/>
         </div>
-        <?
-        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/seo-side.php", Array(), Array(
-            "MODE"      => "html",                                           // будет редактировать в веб-редакторе
-            "NAME"      => "Seo адрес",      // текст всплывающей подсказки на иконке
-            "TEMPLATE"  => ""                    // имя шаблона для нового файла
-        ));
-        ?>
+        <? endif; ?>
+
+        <? if($arResult['UF_ADDRESS']): ?>
+        <div class="seo-side">
+            <img src="<?=CFile::GetPath($arResult['UF_ADDRESS_P']);?>" alt="<?=$arResult['NAME']?>" /><br />
+            <div class="office-address">
+                <div class="office-address-wrapper">
+                    <div class="office-address-heading">Адрес офиса:</div>
+                    <div class="office-address-text"><?=$arResult['UF_ADDRESS'];?><br />
+                        <a href="#yamap">Как добраться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <? endif; ?>
     </div>
 </div>
+
+<? if($arResult['UF_MAP'] && $arResult['UF_MARK_MAP'] && $arResult['UF_DESC_MAP']):
+$coords = explode(',', $arResult['UF_MAP']);
+?>
+<div style="display:none" id="map-setting"
+     centerx="<?=trim($coords[0])?>"
+     centery="<?=trim($coords[1])?>"
+     markx="<?=trim($coords[0])?>"
+     marky="<?=trim($coords[1])?>"
+     marktitl="<?=$arResult['UF_MARK_MAP']?>"
+     markdescr="<?=$arResult['UF_DESC_MAP']?>">
+</div>
 <? endif; ?>
-
-
-
-

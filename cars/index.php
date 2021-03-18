@@ -176,6 +176,6 @@ $APPLICATION->SetTitle("cars");
     false
 );?>
 
-<div style="width: 100%; height: 400px; margin-top: 40px;" class="clearfix" id="yamap"></div>
+<div style="width: 100%; height: 400px;" class="clearfix" id="yamap"></div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
