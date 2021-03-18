@@ -24,7 +24,7 @@ $APPLICATION->SetTitle("Контакты");
  <br>
  <br>
 <h1 style="text-align: center;">Как нас найти</h1>
-<div style="margin: 0px 0px 0px 120px; font-size: 17px;">
+<div style="text-align: center; font-size: 17px;">
 	<p style="font-size: 25px;">
 	 Автосервис Мотор Ленд
 </p>
@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Контакты");
 <p>
 	 Телефон: <a href="tel:74732324262">+7(473)232-42-62</a>
 </p>
-<p>
+<p style="font-size: 25px;">
 	 Дни и часы работы:
 </p>
 <p>
