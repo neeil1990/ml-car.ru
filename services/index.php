@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("services");
+$APPLICATION->SetTitle("НАШИ УСЛУГИ");
 ?>
 <div class="navbar-floating">
     <div class="wrapper clearfix">
@@ -42,9 +42,19 @@ $APPLICATION->SetTitle("services");
 
 <br/>
 
+<div class="wrapper clearfix">
+    <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+        "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+        "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+    ),
+        false
+    );?>
+</div>
+
 <?$APPLICATION->IncludeComponent("bitrix:news", "service", Array(
-    "ADD_ELEMENT_CHAIN" => "N",	// Включать название элемента в цепочку навигации
-    "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+    "ADD_ELEMENT_CHAIN" => "Y",	// Включать название элемента в цепочку навигации
+    "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
     "AJAX_MODE" => "N",	// Включить режим AJAX
     "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
     "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
@@ -81,7 +91,7 @@ $APPLICATION->SetTitle("services");
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
     "IBLOCK_ID" => "2",	// Инфоблок
     "IBLOCK_TYPE" => "services",	// Тип инфоблока
-    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
     "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
     "LIST_FIELD_CODE" => array(	// Поля
         0 => "",
