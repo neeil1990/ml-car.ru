@@ -69,6 +69,10 @@ $this->setFrameMode(true);
 	$component
 );?>
 
+<?
+$db_props = CIBlockElement::GetProperty($arParams["IBLOCK_ID"], $ElementID, array("sort" => "asc"), Array("CODE" => "SERVICE", "EMPTY" => "Y"));
+if($ar_props = $db_props->Fetch()):
+?>
 <div class="services" id="services">
 	<div class="wrapper clearfix">
 		<? $APPLICATION->IncludeComponent("bitrix:news.list", "", Array(
@@ -134,3 +138,4 @@ $this->setFrameMode(true);
 	);?>
 	</div>
 </div>
+<? endif; ?>
