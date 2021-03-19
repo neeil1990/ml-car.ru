@@ -27,3 +27,11 @@ $this->setFrameMode(true);
     </div>
     <? endforeach; ?>
 </div>
+
+<? if($arResult['SECTION']['PATH'][0]['~DESCRIPTION']): ?>
+    <div class="seo-block">
+        <div class="wrapper clearfix">
+            <?=$arResult['SECTION']['PATH'][0]['~DESCRIPTION']?>
+        </div>
+    </div>
+<? endif; ?>
