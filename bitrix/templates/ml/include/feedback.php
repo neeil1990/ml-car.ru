@@ -6,8 +6,7 @@
         обслуживание вашего автомобиля
     </div>
     <div class="feedback-desc">
-        А также: разовый сертификат  10% скидки <br />
-        на слесарные работы и дисконтную карту
+        
     </div>
 </div>
 <div class="feedback-form-wrapper">

@@ -23,25 +23,40 @@ $APPLICATION->SetTitle("Контакты");
 </div>
  <br>
  <br>
-<h1 style="text-align: center;">Как нас найти</h1>
+<h1 style="text-align: center;"><br>
+ </h1>
 <div style="text-align: center; font-size: 17px;">
-	<p style="font-size: 25px;">
-	 Автосервис Мотор Ленд
-</p>
-<p>
-	 Адрес: Воронеж, ул. Шишкова, 75Б
-</p>
-<p>
-	 Телефон: <a href="tel:74732324262">+7(473)232-42-62</a>
-</p>
-<p style="font-size: 25px;">
-	 Дни и часы работы:
-</p>
-<p>
-	 Пн-Сб с 8:00 до 20:00
-</p>
-<p>
-	 Вс с 9:00 до 18:00
-</p>
+	<p>
+	</p>
+ <br>
+	<p>
+	</p>
+	<h1>Как нас найти</h1>
+	<p>
+		 Автосервис Мотор Ленд
+	</p>
+	<p>
+		 Адрес: Воронеж, ул. Шишкова, 75Б
+	</p>
+	<p>
+		 Телефон:&nbsp;<a href="tel:74732324262">+7(473)232-42-62</a>
+	</p>
+	<p>
+		 Дни и часы работы:
+	</p>
+	<p>
+		 Пн-Сб с 8:00 до 20:00
+	</p>
+	<p>
+		 Вс с 9:00 до 18:00
+	</p>
+	<p>
+ <br>
+	</p>
+	<p>
+ <br>
+	</p>
 </div>
-<div style="width: 100%; height: 400px; margin-top: 40px;" class="clearfix" id="yamap"></div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<div style="width: 100%; height: 400px; margin-top: 40px;" class="clearfix" id="yamap">
+</div>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

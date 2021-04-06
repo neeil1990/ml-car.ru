@@ -8,34 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"INFINITI", 
-		"/cars/infiniti/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"LEXUS", 
-		"/cars/leksus/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"RENAULT", 
-		"/cars/reno/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"LADA", 
-		"/cars/lada/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"HONDA", 
 		"/cars/honda/", 
 		Array(), 
@@ -52,13 +24,6 @@ $aMenuLinks = Array(
 	Array(
 		"TOYOTA", 
 		"/cars/toyota/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"SSANGYONG", 
-		"/cars/ssangyong/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -85,8 +50,29 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"О нашем центре", 
-		"#about-us", 
+		"Nissan", 
+		"/cars/nissan/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Kia", 
+		"/cars/kia/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Hyundai", 
+		"/cars/hyundai/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"SSANGYONG", 
+		"/cars/ssangyong/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -94,6 +80,13 @@ $aMenuLinks = Array(
 	Array(
 		"Контакты", 
 		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нашем центре", 
+		"#about-us", 
 		Array(), 
 		Array(), 
 		"" 
