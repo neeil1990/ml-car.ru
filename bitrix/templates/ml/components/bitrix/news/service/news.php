@@ -34,7 +34,7 @@ $this->setFrameMode(true);
             "SECTION_ID" => "",	// ID раздела
             "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
             "SECTION_USER_FIELDS" => array(	// Свойства разделов
-                0 => "",
+                0 => "UF_PRICE",
                 1 => "",
             ),
             "SHOW_PARENT_NAME" => "Y",	// Показывать название раздела

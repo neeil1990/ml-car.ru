@@ -18,6 +18,11 @@ $this->setFrameMode(true);
     <? foreach ($arResult['SECTIONS'] as &$arItem) :?>
         <div class="service-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>" onclick="window.location.href='<?=$arItem['SECTION_PAGE_URL']?>'">
             <div class="service-item-in" style="background: url(<?=$arItem["PICTURE"]["SRC"]?>) no-repeat 27px 20px;"><?=$arItem['NAME']?></div>
+            <? if($arItem['UF_PRICE']): ?>
+            <div class="service-item-price">
+                <span>от <?=$arItem['UF_PRICE']?> <?=RUB?></span>
+            </div>
+            <? endif; ?>
         </div>
     <? endforeach; ?>
 </div>
