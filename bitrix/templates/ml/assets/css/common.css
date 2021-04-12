@@ -981,6 +981,22 @@ a.discount-learn:hover {
     color: #fff;
 }
 
+.contacts{
+    padding: 10px 0;
+}
+.contacts .contacts-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contacts .contacts-list .contacts-item{
+    flex-basis: 320px;
+    text-align: center;
+}
+.contacts .heading{
+    margin-bottom: 30px;
+}
+
 .about-us {
     height: 500px;
     width: 100%;
