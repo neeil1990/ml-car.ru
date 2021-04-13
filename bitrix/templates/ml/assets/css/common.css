@@ -986,7 +986,7 @@ a.discount-learn:hover {
 }
 .contacts .contacts-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .contacts .contacts-list .contacts-item{
