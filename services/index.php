@@ -40,18 +40,6 @@ $APPLICATION->SetTitle("НАШИ УСЛУГИ");
     false
 );?>
 
-<br/>
-
-<div class="wrapper clearfix">
-    <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
-        "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-        "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-    ),
-        false
-    );?>
-</div>
-
 <?$APPLICATION->IncludeComponent("bitrix:news", "service", Array(
     "ADD_ELEMENT_CHAIN" => "Y",	// Включать название элемента в цепочку навигации
     "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации

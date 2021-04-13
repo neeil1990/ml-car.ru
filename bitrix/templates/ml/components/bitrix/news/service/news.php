@@ -12,7 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<br/>
+<br/>
+<br/>
 <div class="services" id="services">
 	<div class="wrapper clearfix">
         <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "news", Array(

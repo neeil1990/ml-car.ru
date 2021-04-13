@@ -1,4 +1,6 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? use Bitrix\Main\Loader;
+
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -11,7 +13,79 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+$arFilter = array(
+    "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+    "ACTIVE" => "Y",
+    "GLOBAL_ACTIVE" => "Y",
+);
+if (0 < intval($arResult["VARIABLES"]["SECTION_ID"]))
+    $arFilter["ID"] = $arResult["VARIABLES"]["SECTION_ID"];
+elseif ('' != $arResult["VARIABLES"]["SECTION_CODE"])
+    $arFilter["=CODE"] = $arResult["VARIABLES"]["SECTION_CODE"];
+
+$obCache = new CPHPCache();
+if ($obCache->InitCache(36000, serialize($arFilter), "/iblock/catalog"))
+{
+    $arCurSection = $obCache->GetVars();
+}
+elseif ($obCache->StartDataCache())
+{
+    $arCurSection = array();
+    if (Loader::includeModule("iblock"))
+    {
+        $dbRes = CIBlockSection::GetList(array(), $arFilter, false, array("ID", "NAME", "UF_PROMO"));
+
+        if(defined("BX_COMP_MANAGED_CACHE"))
+        {
+            global $CACHE_MANAGER;
+            $CACHE_MANAGER->StartTagCache("/iblock/catalog");
+
+            if ($arCurSection = $dbRes->Fetch())
+                $CACHE_MANAGER->RegisterTag("iblock_id_".$arParams["IBLOCK_ID"]);
+
+            $CACHE_MANAGER->EndTagCache();
+        }
+        else
+        {
+            if(!$arCurSection = $dbRes->Fetch())
+                $arCurSection = array();
+        }
+    }
+    $obCache->EndDataCache($arCurSection);
+}
+if (!isset($arCurSection))
+    $arCurSection = array();
 ?>
+
+<? if($arCurSection['UF_PROMO']): ?>
+<div class="main-index">
+    <div class="wrapper clearfix">
+        <?
+        $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/services_slider.php", Array("DESCRIPTION" => $arCurSection['UF_PROMO']), Array(
+            "MODE"      => "php",
+            "NAME"      => "",
+            "TEMPLATE"  => "",
+            "SHOW_BORDER" => false
+        ));
+        ?>
+    </div>
+</div>
+<?else:?>
+<br/>
+<br/>
+<? endif; ?>
+
+<div class="wrapper clearfix">
+    <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+        "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+        "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+    ),
+        false
+    );?>
+</div>
+
 <div class="services" id="services">
     <div class="wrapper clearfix">
         <?$APPLICATION->IncludeComponent(
