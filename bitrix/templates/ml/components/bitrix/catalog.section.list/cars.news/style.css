@@ -1,0 +1,8 @@
+.car-brands{
+    padding: 35px 0 35px;
+    border-bottom: none;
+    text-align: left;
+}
+.car-brands .heading{
+    margin-bottom: 15px;
+}

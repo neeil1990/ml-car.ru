@@ -906,6 +906,15 @@ a.learn-more:hover {
     color: #fff;
     font-size: 1rem;
 }
+.bonus-news{
+    margin-top: 25px;
+}
+.bonus-news img{
+    width: 100%;
+}
+.bonus-news .discount-card-list li{
+    text-align: justify;
+}
 
 .discount-card {
     margin-top: 50px;

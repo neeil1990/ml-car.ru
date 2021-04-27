@@ -1,0 +1,39 @@
+.reviews .reviews-title{
+    margin-top: 25px;
+    font-weight: bold;
+}
+.reviews .reviews-item{
+    display: inline-block;
+    width: 260px;
+    border: 1px #d8d8d8 solid;
+    border-radius: 6px;
+    -webkit-transform: skew(
+            -10deg
+    );
+    -ms-transform: skew(-10deg);
+    transform: skew(
+            -10deg
+    );
+    text-align: left;
+    margin-top: 25px;
+}
+.reviews .reviews-wrapper{
+    -webkit-transform: skew(
+            10deg
+    );
+    -ms-transform: skew(10deg);
+    transform: skew(
+            10deg
+    );
+    color: #000;
+    line-height: 18px;
+    /* background: url(../images/mapmark2.png) no-repeat 25px 15px; */
+    padding: 12px 20px 15px 50px;
+}
+.reviews .reviews-heading{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.reviews .reviews-text{
+    font-size: 13px;
+}

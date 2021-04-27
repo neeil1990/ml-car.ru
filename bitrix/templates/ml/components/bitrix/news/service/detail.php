@@ -14,7 +14,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$arSelect = Array("ID", "NAME", "PROPERTY_PROMO");
+$arSelect = Array("ID", "NAME", "DETAIL_TEXT", "PROPERTY_PROMO");
 $arFilter = Array("IBLOCK_ID" => $arParams['IBLOCK_ID'], "CODE" => $arResult['VARIABLES']['ELEMENT_CODE']);
 $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
 if($ob = $res->GetNextElement())
@@ -49,9 +49,11 @@ if($ob = $res->GetNextElement())
     );?>
 </div>
 
-<?$ElementID = $APPLICATION->IncludeComponent(
+<?
+$temp = empty($arFields['DETAIL_TEXT']) ? ".empty" : ".default";
+$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"",
+    $temp,
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
