@@ -1,7 +1,7 @@
 <footer>
     <div class="wrapper clearfix">
         <div class="foot-logo-block">
-            <a href="http://ml-car.com/" title="Автосервис Мотор Ленд">
+            <a href="http://ml-car.ru/" title="Автосервис Мотор Ленд">
 
                 <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/logo.png" alt="Автосервис Мотор Ленд" />
             </a>
