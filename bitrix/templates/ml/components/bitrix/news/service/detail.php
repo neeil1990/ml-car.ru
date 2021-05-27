@@ -25,7 +25,7 @@ if($ob = $res->GetNextElement())
     <div class="main-index">
         <div class="wrapper clearfix">
             <?
-            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/services_slider.php", Array("DESCRIPTION" => $arFields['PROPERTY_PROMO_VALUE']), Array(
+            $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH."/include/services_slider.php", Array("DESCRIPTION" => $arFields['~PROPERTY_PROMO_VALUE']), Array(
                 "MODE"      => "php",
                 "NAME"      => "",
                 "TEMPLATE"  => "",
